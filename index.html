@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Carnicero Maestro en Carnes: variedad de carnes de res, cerdo, pollo y productos complementarios en Ambato.">
+<title>Carnicero Maestro en Carnes</title>
+
+<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body id="arriba">
+<audio id="musicaFondo" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<button id="botonMusica" onclick="controlarMusica()">
+     Activar música
+</button>
+
+<script>
+    const musica = document.getElementById("musicaFondo");
+    const boton = document.getElementById("botonMusica");
+
+    function controlarMusica() {
+        if (musica.paused) {
+            musica.play();
+            boton.textContent = "⏸ Pausar música";
+        } else {
+            musica.pause();
+            boton.textContent = "🎵 Activar música";
+        }
+    }
+</script>
+
+<!-- PRESENTACIÓN CON LOGO, FOTO Y VIDEO -->
+
+<section class="presentacion" id="presentacion">
+
+    <img src="logo.jpg.jpeg"
+         alt="Logotipo de Carnicero Maestro en Carnes"
+         class="logo-principal">
+
+    <h2>Calidad que se nota, sabor que se disfruta</h2>
+
+    <p class="intro">
+        Te damos la bienvenida a Carnicero Maestro en Carnes.
+        Conoce nuestro establecimiento y descubre nuestra identidad,
+        variedad y compromiso con tu mesa.
+    </p>
+
+    <div class="presentacion-media">
+
+        <article class="media-card">
+            <h3>Conoce nuestro local</h3>
+            <img src="local.jpg.jpeg"
+                 alt="Fachada de Carnicero Maestro en Carnes"
+                 class="foto-local">
+        </article>
+
+        <article class="media-card">
+            <h3>Un vistazo a nuestra carnicería</h3>
+            <video class="video-productos" controls playsinline preload="metadata">
+                <source src="productos.mp4.mp4" type="video/mp4">
+                Tu navegador no puede reproducir este video.
+            </video>
+        </article>
+
+    </div>
+</section>
+
+<!-- ENCABEZADO -->
+
+<header>
+    <h1>Carnicero Maestro en Carnes</h1>
+    <p>Variedad, sabor y calidad para tu mesa</p>
+    <a href="#catalogo" class="boton">Explorar productos</a>
+</header>
+
+<!-- MENÚ -->
+
+<nav>
+    <a href="#arriba">Inicio</a>
+    <a href="#catalogo">Productos</a>
+    <a href="#esencia">Nuestra esencia</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<!-- INICIO -->
+
+<section id="inicio">
+    <h2 class="titulo">Bienvenidos</h2>
+
+    <p class="subtitulo">
+        Un espacio donde encuentras variedad de carnes y productos
+        para acompañar tus comidas y compartir en familia.
+    </p>
+
+    <div class="inicio-contenido">
+        <div class="inicio-texto">
+            <h3>El sabor que acompaña tu hogar</h3>
+
+            <p>
+                En Carnicero Maestro en Carnes ofrecemos una amplia
+                variedad de productos para las necesidades de cada hogar.
+                Contamos con carnes de res, cerdo, pollo, embutidos y
+                productos complementarios.
+            </p>
+
+            <p>
+                Nuestro propósito es brindar alternativas, variedad
+                y una atención cercana para que encuentres lo que
+                necesitas en un solo lugar.
+            </p>
+        </div>
+
+        <div class="inicio-imagen">
+            <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=1000&q=85"
+                 alt="Selección de cortes de carne">
+        </div>
+    </div>
+</section>
+
+<!-- CATÁLOGO -->
+
+<section id="catalogo">
+    <h2 class="titulo">Nuestro catálogo</h2>
+
+    <p class="subtitulo">
+        Descubre nuestra variedad de carnes y productos complementarios.
+    </p>
+
+    <h3 class="categoria">Carnes de res</h3>
+    <div class="productos">
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=700&q=85" alt="Carne de res para sopa">
+            <div class="producto-info">
+                <h3>Carne para sopa</h3>
+                <p>Ideal para caldos y sopas tradicionales.</p>
+                <span class="precio">$3,00 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=85" alt="Bistec de res">
+            <div class="producto-info">
+                <h3>Bistec</h3>
+                <p>Para preparar a la plancha o en sartén.</p>
+                <span class="precio">$3,50 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=700&q=85" alt="Carne de res para asar">
+            <div class="producto-info">
+                <h3>Carne para asar</h3>
+                <p>Perfecta para parrilladas y asados.</p>
+                <span class="precio">$4,00 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?auto=format&fit=crop&w=700&q=85" alt="Costillas de carne">
+            <div class="producto-info">
+                <h3>Costilla de res</h3>
+                <p>Para sopas y preparaciones especiales.</p>
+                <span class="precio">$3,50 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=700&q=85&sat=-35" alt="Pecho de res">
+            <div class="producto-info">
+                <h3>Pecho de res</h3>
+                <p>Ideal para guisos y comidas tradicionales.</p>
+                <span class="precio">$3,50 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="carne .jpg">
+            <div class="producto-info">
+                <h3>Carne molida</h3>
+                <p>Para hamburguesas, rellenos y salsas.</p>
+                <span class="precio">$3,50 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1603048297172-c92544798d5a?auto=format&fit=crop&w=700&q=85" alt="Hígado">
+            <div class="producto-info">
+                <h3>Hígado</h3>
+                <p>Una alternativa para distintas recetas.</p>
+                <span class="precio">$2,50 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=700&q=85&hue=15" alt="Lengua de res">
+            <div class="producto-info">
+                <h3>Lengua</h3>
+                <p>Para preparaciones tradicionales.</p>
+                <span class="precio">$3,50 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=700&q=85&sat=20" alt="Ribeye">
+            <div class="producto-info">
+                <h3>Ribeye</h3>
+                <p>Corte especial para parrilla.</p>
+                <span class="precio">$6,00 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=85&sat=25" alt="Lomo fino">
+            <div class="producto-info">
+                <h3>Lomo fino</h3>
+                <p>Corte suave para ocasiones especiales.</p>
+                <span class="precio">$6,00 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=700&q=85&hue=10" alt="New York steak">
+            <div class="producto-info">
+                <h3>New York</h3>
+                <p>Corte para preparar a la parrilla.</p>
+                <span class="precio">$6,00 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=700&q=85&hue=25" alt="Tomahawk">
+            <div class="producto-info">
+                <h3>Tomahawk</h3>
+                <p>Corte especial con hueso.</p>
+                <span class="precio">$9,00 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=85&hue=20" alt="Picaña">
+            <div class="producto-info">
+                <h3>Picaña</h3>
+                <p>Una opción para asados y parrilladas.</p>
+                <span class="precio">$6,00 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=700&q=85&sat=-60" alt="Hueso carnudo">
+            <div class="producto-info">
+                <h3>Hueso carnudo</h3>
+                <p>Ideal para caldos y sopas.</p>
+                <span class="precio">$2,00 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=85&sat=-20" alt="Carne apanada">
+            <div class="producto-info">
+                <h3>Carne apanada</h3>
+                <p>Lista para preparar en casa.</p>
+                <span class="precio">$4,00 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=700&q=85&sat=-40" alt="Tuétano">
+            <div class="producto-info">
+                <h3>Tuétano</h3>
+                <p>Para caldos y preparaciones especiales.</p>
+                <span class="precio">$2,50 / libra</span>
+            </div>
+        </article>
+
+    </div>
+
+    <h3 class="categoria">Carne de cerdo</h3>
+    <div class="productos">
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?auto=format&fit=crop&w=700&q=85" alt="Costilla de cerdo">
+            <div class="producto-info">
+                <h3>Costilla de cerdo</h3>
+                <p>Para horno, parrilla o guisos.</p>
+                <span class="precio">$3,50 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?auto=format&fit=crop&w=700&q=85&sat=-20" alt="Chuleta de cerdo">
+            <div class="producto-info">
+                <h3>Chuleta</h3>
+                <p>Ideal para almuerzos y cenas.</p>
+                <span class="precio">$3,50 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?auto=format&fit=crop&w=700&q=85&hue=20" alt="Lomo de cerdo">
+            <div class="producto-info">
+                <h3>Lomo de cerdo</h3>
+                <p>Para asados y diferentes recetas.</p>
+                <span class="precio">$4,00 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=85&hue=30" alt="Fritada de cerdo">
+            <div class="producto-info">
+                <h3>Fritada</h3>
+                <p>Para platos tradicionales.</p>
+                <span class="precio">$3,50 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?auto=format&fit=crop&w=700&q=85&sat=30" alt="Panceta de cerdo">
+            <div class="producto-info">
+                <h3>Panceta</h3>
+                <p>Para asar o preparar en sartén.</p>
+                <span class="precio">$4,00 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="images.jpg" alt="Carne molida de cerdo">
+            <div class="producto-info">
+                <h3>Carne molida de cerdo</h3>
+                <p>Para rellenos y preparaciones caseras.</p>
+                <span class="precio">$3,50 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?auto=format&fit=crop&w=700&q=85&sat=-45" alt="Patas de cerdo">
+            <div class="producto-info">
+                <h3>Patas de cerdo</h3>
+                <p>Para recetas tradicionales.</p>
+                <span class="precio">$2,00 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=85&sat=-50" alt="Cuero de cerdo">
+            <div class="producto-info">
+                <h3>Cuero de cerdo</h3>
+                <p>Para distintas preparaciones.</p>
+                <span class="precio">$2,00 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1602470520998-f4a52199a3d6?auto=format&fit=crop&w=700&q=85&hue=35" alt="Pierna de cerdo">
+            <div class="producto-info">
+                <h3>Pierna de cerdo</h3>
+                <p>Para hornear y compartir en familia.</p>
+                <span class="precio">$3,50 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=700&q=85&hue=30" alt="Lomo fino de cerdo">
+            <div class="producto-info">
+                <h3>Lomo fino de cerdo</h3>
+                <p>Un corte especial y versátil.</p>
+                <span class="precio">$4,50 / libra</span>
+            </div>
+        </article>
+
+    </div>
+
+    <h3 class="categoria">Pollo</h3>
+    <div class="productos">
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=700&q=85" alt="Pollo entero">
+            <div class="producto-info">
+                <h3>Pollo entero</h3>
+                <p>Para preparar al horno o guisado.</p>
+                <span class="precio">$1,50 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=700&q=85&sat=-20" alt="Pechuga de pollo">
+            <div class="producto-info">
+                <h3>Pechuga</h3>
+                <p>Ideal para filetes y preparaciones.</p>
+                <span class="precio">$2,00 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=700&q=85&hue=15" alt="Piernas de pollo">
+            <div class="producto-info">
+                <h3>Piernas de pollo</h3>
+                <p>Para hornear, freír o guisar.</p>
+                <span class="precio">$1,75 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=700&q=85&sat=25" alt="Muslos de pollo">
+            <div class="producto-info">
+                <h3>Muslos</h3>
+                <p>Una opción para diferentes preparaciones.</p>
+                <span class="precio">$1,75 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=700&q=85&sat=-45" alt="Alas de pollo">
+            <div class="producto-info">
+                <h3>Alas</h3>
+                <p>Para preparar al horno o fritas.</p>
+                <span class="precio">$1,50 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=700&q=85&hue=30" alt="Pollo despresado">
+            <div class="producto-info">
+                <h3>Pollo despresado</h3>
+                <p>Porciones listas para cocinar.</p>
+                <span class="precio">$1,75 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=700&q=85&sat=-60" alt="Patas de pollo">
+            <div class="producto-info">
+                <h3>Patas de pollo</h3>
+                <p>Para caldos y sopas.</p>
+                <span class="precio">$1,00 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=700&q=85&hue=45" alt="Menudencias de pollo">
+            <div class="producto-info">
+                <h3>Menudencias</h3>
+                <p>Para sopas y preparaciones caseras.</p>
+                <span class="precio">$1,25 / libra</span>
+            </div>
+        </article>
+
+    </div>
+
+    <h3 class="categoria">Embutidos</h3>
+    <div class="productos">
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1524438418049-ab2acb7aa48f?auto=format&fit=crop&w=700&q=85" alt="Mortadela">
+            <div class="producto-info">
+                <h3>Mortadela</h3>
+                <p>Para desayunos y sánduches.</p>
+                <span class="precio">$2,50 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1524438418049-ab2acb7aa48f?auto=format&fit=crop&w=700&q=85&sat=-30" alt="Jamón">
+            <div class="producto-info">
+                <h3>Jamón</h3>
+                <p>Para desayunos y meriendas.</p>
+                <span class="precio">$3,50 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1524438418049-ab2acb7aa48f?auto=format&fit=crop&w=700&q=85&hue=15" alt="Tocino">
+            <div class="producto-info">
+                <h3>Tocino</h3>
+                <p>Para complementar tus preparaciones.</p>
+                <span class="precio">$4,00 / libra</span>
+            </div>
+        </article>
+
+    </div>
+
+    <h3 class="categoria">Otros productos</h3>
+    <div class="productos">
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=700&q=85&hue=45" alt="Carne de borrego">
+            <div class="producto-info">
+                <h3>Carne de borrego</h3>
+                <p>Para platos tradicionales.</p>
+                <span class="precio">$5,00 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=85&hue=40" alt="Corazón">
+            <div class="producto-info">
+                <h3>Corazón</h3>
+                <p>Para distintas preparaciones.</p>
+                <span class="precio">$2,50 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=700&q=85&hue=60" alt="Guatita">
+            <div class="producto-info">
+                <h3>Guatita</h3>
+                <p>Para preparar platos tradicionales.</p>
+                <span class="precio">$3,00 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=700&q=85" alt="Papas">
+            <div class="producto-info">
+                <h3>Papas</h3>
+                <p>Un complemento para diferentes platos.</p>
+                <span class="precio">$0,43 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=700&q=85" alt="Arroz">
+            <div class="producto-info">
+                <h3>Arroz</h3>
+                <p>Un alimento básico para el hogar.</p>
+                <span class="precio">$0,60 / libra</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1551462147-ff29053bfc14?auto=format&fit=crop&w=700&q=85" alt="Fideos">
+            <div class="producto-info">
+                <h3>Fideos</h3>
+                <p>Presentación en paquete.</p>
+                <span class="precio">$1,00 / paquete</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=700&q=85" alt="Aceite">
+            <div class="producto-info">
+                <h3>Aceite</h3>
+                <p>Para la preparación de tus alimentos.</p>
+                <span class="precio">$1,00 / unidad</span>
+            </div>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?auto=format&fit=crop&w=700&q=85" alt="Huevos">
+            <div class="producto-info">
+                <h3>Huevos</h3>
+                <p>Para desayunos y preparaciones caseras.</p>
+                <span class="precio">$3,00 / cubeta</span>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- NUESTRA ESENCIA -->
+
+<section id="esencia">
+    <h2 class="titulo">Nuestra esencia</h2>
+
+    <p class="subtitulo">
+        Trabajamos para ofrecer una experiencia de compra sencilla,
+        con productos variados y atención cercana.
+    </p>
+
+    <div class="valores">
+
+        <div class="valor">
+            <h3>Variedad</h3>
+            <p>Diferentes tipos de carnes y productos para acompañar las comidas de cada día.</p>
+        </div>
+
+        <div class="valor">
+            <h3>Alternativas</h3>
+            <p>Opciones para distintos gustos y necesidades del hogar.</p>
+        </div>
+
+        <div class="valor">
+            <h3>Atención</h3>
+            <p>Un trato cordial y cercano para nuestros clientes.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACTO -->
+
+<section id="contacto">
+    <h2 class="titulo">Visítanos</h2>
+
+    <p class="subtitulo">
+        Estamos listos para atenderte y ofrecerte nuestros productos.
+    </p>
+
+    <div class="contacto-info">
+        <p><strong>Nombre:</strong> Carnicero Maestro en Carnes</p>
+        <p><strong>Dirección:</strong> Av. Pichincha y Latacunga, Ambato, Tungurahua</p>
+        <p><strong>Teléfono:</strong> 0960997443</p>
+        <p><strong>Ciudad:</strong> Ambato - Ecuador</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 <span>Carnicero Maestro en Carnes</span>. Todos los derechos reservados.</p>
+    <p>Calidad, variedad y sabor para tu hogar.</p>
+</footer>
+
+<a href="#arriba" class="subir" aria-label="Volver al inicio">↑</a>
+
+</body>
+</html>

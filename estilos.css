@@ -1,0 +1,475 @@
+
+:root {
+    --vino: #741b20;
+    --vino-oscuro: #4e1116;
+    --dorado: #c9a34e;
+    --crema: #f5f1e9;
+    --crema-oscuro: #eae0d1;
+    --oscuro: #211b18;
+    --texto: #403832;
+    --blanco: #fffdf9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--crema);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* PRESENTACIÓN */
+
+.presentacion {
+    background: linear-gradient(145deg, #100d0c, #2b1112 60%, #100d0c);
+    color: #f8f1e6;
+    text-align: center;
+    padding: 52px 7% 62px;
+    border-bottom: 3px solid var(--dorado);
+}
+
+.logo-principal {
+    display: block;
+    width: min(260px, 72%);
+    height: auto;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    box-shadow: 0 0 28px rgba(201,163,78,.22);
+}
+
+.presentacion h2 {
+    color: #e1bd6c;
+    font-family: Georgia, serif;
+    font-size: clamp(27px, 4vw, 39px);
+    margin: 0 0 12px;
+}
+
+.presentacion .intro {
+    max-width: 760px;
+    margin: 0 auto 32px;
+    color: #eee4d5;
+    line-height: 1.75;
+}
+
+.presentacion-media {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.media-card {
+    background: rgba(255,255,255,.045);
+    border: 1px solid rgba(201,163,78,.55);
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 14px 35px rgba(0,0,0,.25);
+}
+
+.media-card h3 {
+    color: #e1bd6c;
+    font-family: Georgia, serif;
+    margin: 8px 0 14px;
+    font-size: 22px;
+}
+
+.foto-local, .video-productos {
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 9px;
+    background: #080707;
+}
+
+.video-productos {
+    object-fit: contain;
+}
+
+/* ENCABEZADO */
+
+header {
+    min-height: 470px;
+    background:
+        linear-gradient(rgba(24,15,11,.68), rgba(24,15,11,.75)),
+        url("https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=1800&q=90");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 45px 20px;
+    color: white;
+}
+
+header h1 {
+    color: #e1bd6c;
+    font-family: Georgia, serif;
+    font-size: clamp(34px, 5vw, 58px);
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+header p {
+    font-size: 19px;
+    margin-bottom: 28px;
+}
+
+.boton {
+    background: var(--vino);
+    color: white;
+    text-decoration: none;
+    padding: 13px 28px;
+    border: 1px solid var(--dorado);
+    border-radius: 4px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.boton:hover {
+    background: var(--vino-oscuro);
+    transform: translateY(-3px);
+}
+
+/* NAVEGACIÓN */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--oscuro);
+    border-bottom: 3px solid var(--dorado);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    padding: 16px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #e1bd6c;
+}
+
+/* SECCIONES */
+
+section {
+    padding: 70px 7%;
+}
+
+.titulo {
+    text-align: center;
+    color: var(--vino);
+    font-family: Georgia, serif;
+    font-size: clamp(28px, 4vw, 37px);
+    margin-bottom: 12px;
+}
+
+.subtitulo {
+    max-width: 760px;
+    margin: 0 auto 38px;
+    text-align: center;
+    color: #74675c;
+}
+
+/* INICIO */
+
+.inicio-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.inicio-texto h3 {
+    font-family: Georgia, serif;
+    color: var(--vino);
+    font-size: 27px;
+    margin-bottom: 16px;
+}
+
+.inicio-texto p {
+    margin-bottom: 13px;
+}
+
+.inicio-imagen img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.14);
+}
+
+/* CATÁLOGO */
+
+#catalogo {
+    background: var(--crema-oscuro);
+}
+
+.categoria {
+    color: var(--vino);
+    font-family: Georgia, serif;
+    font-size: 27px;
+    margin: 45px 0 22px;
+    padding: 5px 0 5px 15px;
+    border-left: 5px solid var(--dorado);
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.producto {
+    background: var(--blanco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(49,33,23,.09);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.producto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(49,33,23,.16);
+}
+
+.producto img {
+    width: 100%;
+    height: 190px;
+    display: block;
+    object-fit: cover;
+    background: #e6ded2;
+}
+
+.producto-info {
+    padding: 19px 15px 21px;
+    text-align: center;
+}
+
+.producto-info h3 {
+    color: var(--vino);
+    font-family: Georgia, serif;
+    font-size: 21px;
+    margin-bottom: 6px;
+}
+
+.producto-info p {
+    color: #75685d;
+    font-size: 14px;
+    min-height: 43px;
+    margin-bottom: 13px;
+}
+
+.precio {
+    display: inline-block;
+    background: var(--vino);
+    color: white;
+    border-radius: 30px;
+    padding: 7px 17px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* NUESTRA ESENCIA */
+
+#esencia {
+    background: var(--crema);
+}
+
+.valores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 35px auto 0;
+}
+
+.valor {
+    background: var(--blanco);
+    text-align: center;
+    padding: 32px 22px;
+    border-bottom: 4px solid var(--dorado);
+    border-radius: 7px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.07);
+}
+
+.valor h3 {
+    color: var(--vino);
+    font-family: Georgia, serif;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+/* CONTACTO */
+
+#contacto {
+    background: var(--crema-oscuro);
+    text-align: center;
+}
+
+.contacto-info {
+    max-width: 700px;
+    margin: auto;
+    background: var(--blanco);
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+.contacto-info p {
+    margin: 12px 0;
+}
+
+.contacto-info strong {
+    color: var(--vino);
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background: var(--oscuro);
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+    border-top: 3px solid var(--dorado);
+}
+
+footer span {
+    color: #e1bd6c;
+}
+
+/* BOTÓN PARA SUBIR */
+
+.subir {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--vino);
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.2);
+}
+
+.subir:hover {
+    background: var(--vino-oscuro);
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media(max-width: 700px) {
+    header {
+        min-height: 360px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    section {
+        padding: 48px 6%;
+    }
+
+    .inicio-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .inicio-imagen img {
+        height: 260px;
+    }
+
+    .categoria {
+        font-size: 23px;
+    }
+
+    .productos {
+        grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+        gap: 15px;
+    }
+
+    .producto img {
+        height: 145px;
+    }
+
+    .producto-info {
+        padding: 14px 10px;
+    }
+
+    .producto-info h3 {
+        font-size: 18px;
+    }
+
+    .precio {
+        font-size: 12px;
+    }
+
+    .presentacion {
+        padding: 42px 6%;
+    }
+
+    .presentacion-media {
+        grid-template-columns: 1fr;
+    }
+
+    .foto-local, .video-productos {
+        height: auto;
+        max-height: 380px;
+    }
+}
+#botonMusica {
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+    background: #171717;
+    color: #d6b35d;
+    border: 1px solid #c9a34e;
+    padding: 12px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 9999;
+}
+
+#botonMusica:hover {
+    background: #8f151b;
+    color: white;
+}
